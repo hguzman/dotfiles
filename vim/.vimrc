@@ -42,6 +42,8 @@ Bundle 'tpope/vim-dispatch'
 
 Bundle 'plasticboy/vim-markdown'
 
+Plugin 'mattn/emmet-vim'
+
 call vundle#end() 
 
 set tags=./tags; " Set tags directory
@@ -59,7 +61,8 @@ augroup myfiletypes
 	" Clear old autocmds in group
 	autocmd!
 	" autoindent with two spaces, always expand tabs
-	autocmd FileType ruby,eruby,yaml,markdown set ai sw=2 sts=2 et
+	autocmd FileType ruby,eruby,yaml,markdown,html,css set ai sw=2 sts=2 et
+	autocmd FileType html,css EmmetInstall
 augroup END
 " ================
 
@@ -71,6 +74,8 @@ syntax enable
 set background=dark
 let g:molokai_original=1
 let g:rehash256=1
+let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0
 set t_Co=256
 colorscheme molokai
 
@@ -91,6 +96,10 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+" Atajos
+map <c-t> <esc>:tabnew<cr>
+
 " Remove highlights with leader + enter
 nmap <Leader><CR> :nohlsearch<cr>
 
