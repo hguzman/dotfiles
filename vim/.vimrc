@@ -44,6 +44,11 @@ Bundle 'plasticboy/vim-markdown'
 
 Plugin 'mattn/emmet-vim'
 
+Plugin 'thoughtbot/vim-rspec'
+
+" Para Ggrep ]q
+Plugin 'tpope/vim-unimpaired'
+
 call vundle#end() 
 
 set tags=./tags; " Set tags directory
@@ -113,6 +118,12 @@ nmap <silent> <leader>c :TestFile<CR>
 nmap <silent> <leader>s :TestNearest<CR>
 map <leader>t :A<CR> " \t to jump to test file
 map <leader>r :r<cr> " \t to jump to related file
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 set laststatus=2
 
