@@ -174,6 +174,10 @@ set directory+=~/.vim/swap//
 set directory+=~/tmp//
 set directory+=.
 
+" Cambia el tamaño de la letra en consola
+set guifont=Monaco:h16
+
+
 " viminfo stores the the state of your previous editing session
 set viminfo+=n~/.vim/viminfo
 
