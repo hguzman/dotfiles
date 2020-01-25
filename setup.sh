@@ -2,7 +2,7 @@
 
 echo "Linking up the dotfiles to your home directory ($HOME)"
 
-cd ~/dotfiles
+cd ~/.dotfiles
 stow vim
 stow git
 cd -
