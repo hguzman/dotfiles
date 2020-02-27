@@ -8,8 +8,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Dependencies of snipmate
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
+Plugin 'SirVer/ultisnips'
+" Bundle "MarcWeber/vim-addon-mw-utils"
+" Bundle "tomtom/tlib_vim"
 Bundle "honza/vim-snippets"
 " Git tools
 Bundle 'tpope/vim-fugitive'
@@ -18,7 +19,7 @@ Bundle 'gmarik/vundle'
 " Rails :/
 Bundle 'tpope/vim-rails.git'
 " Snippets for our use :)
-Bundle 'garbas/vim-snipmate'
+" Bundle 'garbas/vim-snipmate'
 " Commenting and uncommenting stuff
 Bundle 'tomtom/tcomment_vim'
 " Molokai theme
@@ -56,6 +57,7 @@ set autoindent " Auto indention should be on
 
 
 filetype plugin indent on
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Ruby stuff: Thanks Ben :)
 " ================
@@ -74,6 +76,7 @@ augroup END
 " Syntax highlighting and theme
 
 syntax enable
+
 
 " Configs to make Molokai look great
 set background=dark
@@ -107,6 +110,7 @@ map <c-t> <esc>:tabnew<cr>
 
 " Remove highlights with leader + enter
 nmap <Leader><CR> :nohlsearch<cr>
+nmap ; :buffers<CR>
 
 " Buffer switching
 map <leader>p :bp<CR> " \p previous buffer
