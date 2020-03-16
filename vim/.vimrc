@@ -69,7 +69,7 @@ augroup myfiletypes
 	autocmd!
 	" autoindent with two spaces, always expand tabs
 	autocmd FileType ruby,eruby,yaml,markdown,html,css set ai sw=2 sts=2 et
-	autocmd FileType html,css EmmetInstall
+	autocmd FileType html,css,eruby EmmetInstall
 augroup END
 " ================
 
@@ -77,6 +77,8 @@ augroup END
 
 syntax enable
 
+" Split your windows
+let g:UltiSnipsEditSplit="vertical"
 
 " Configs to make Molokai look great
 set background=dark
@@ -108,6 +110,8 @@ set smartcase
 " Atajos
 map <c-t> <esc>:tabnew<cr>
 
+command! SortCSS :g#\({\n\)\@<=#.,/}/sort
+
 " Remove highlights with leader + enter
 nmap <Leader><CR> :nohlsearch<cr>
 nmap ; :buffers<CR>
@@ -136,14 +140,15 @@ inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
 inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+" noremap   <Up>     <NOP>
+noremap   <Up>    :echoe "Use k"<CR>
+noremap   <Down>  :echoe "Use j"<CR>
+noremap   <Left>  :echoe "Use h"<CR>
+noremap   <Right> :echoe "Use l"<CR>
 
 " Removing escape
-ino jj <esc>
-cno jj <c-c>
+ino jk <esc>
+cno jk <c-c>
 vno v <esc>
 
 " highlight the current line
