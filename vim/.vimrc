@@ -106,7 +106,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
+set switchbuf=useopen,split
 " Atajos
 map <c-t> <esc>:tabnew<cr>
 
