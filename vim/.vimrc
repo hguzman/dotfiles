@@ -206,8 +206,8 @@ endif
 " Ruby hash syntax conversion
 nnoremap <F12> :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<return>
 
-nmap <Leader><CR> :nohlsearch<cr>
-
+" nmap <Leader><CR> :nohlsearch<cr>
+map <leader>w :update<CR>
 map <leader>q :NERDTreeToggle<CR>
 
 set clipboard=unnamed
