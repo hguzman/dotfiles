@@ -49,6 +49,8 @@ Plugin 'thoughtbot/vim-rspec'
 
 " Para Ggrep ]q
 Plugin 'tpope/vim-unimpaired'
+" Coloca una barra en la parte de abajo
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end() 
 
@@ -76,6 +78,22 @@ augroup END
 " Syntax highlighting and theme
 
 syntax enable
+
+" configuración barra
+let g:lightline = {
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ },
+      \ }
+
+function! LightlineFilename()
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfunction
 
 " Split your windows
 let g:UltiSnipsEditSplit="vertical"
@@ -140,11 +158,16 @@ inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
 inoremap  <Right>  <NOP>
+
 " noremap   <Up>     <NOP>
+
 noremap   <Up>    :echoe "Use k"<CR>
 noremap   <Down>  :echoe "Use j"<CR>
 noremap   <Left>  :echoe "Use h"<CR>
 noremap   <Right> :echoe "Use l"<CR>
+
+" Autocomplete
+inoremap <C-Space> <C-x><C-o>
 
 " Removing escape
 ino jk <esc>

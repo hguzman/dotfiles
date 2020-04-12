@@ -6,3 +6,27 @@ snippet sp
 params.require(:${1:model}).permit(:${2:field1}, :${3:field2})
 endsnippet
 
+snippet vpo
+validates :${1:field}, presence: true
+endsnippet
+
+#  test
+snippet haveone
+it { should have_one(:${1:model}.dependent(:destroy) }
+endsnippet
+
+snippet havedb
+it { should have_db_column(:${1:field}).of_type(:${2:string}) }
+endsnippet
+
+snippet havepresence
+it { should validate_presence_of(:${1:field}) }
+endsnippet
+
+snippet havebelongs
+it { should belong_to(:${1:field}) }
+endsnippet
+
+snippet havemany "has many"
+it { should have_many(:${1:associations}).dependent(:destroy) }
+endsnippet

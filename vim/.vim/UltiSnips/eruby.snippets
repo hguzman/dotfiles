@@ -7,3 +7,11 @@ endsnippet
 snippet render "Render"
 <%= render partial: '${1:partial}', ${2:collection: @${3:collection}} %>
 endsnippet
+
+snippet i18nl "Label I18n"
+${1:Model}.human_attribute_name :${2:field}
+endsnippet
+
+snippet i18nm "Model I18n"
+${1:Model}.model_name.human(count: ${2:2})
+endsnippet
