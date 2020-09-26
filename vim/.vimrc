@@ -51,6 +51,9 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-unimpaired'
 " Coloca una barra en la parte de abajo
 Plugin 'itchyny/lightline.vim'
+" Para el tema de manejar el buffer
+" Plugin 'sjbach/lusty'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end() 
 
@@ -133,6 +136,11 @@ command! SortCSS :g#\({\n\)\@<=#.,/}/sort
 " Remove highlights with leader + enter
 nmap <Leader><CR> :nohlsearch<cr>
 nmap ; :buffers<CR>
+
+" Open a new Tab and search for something
+nmap <leader>b :tab split<CR>:Ack ""<left>
+" Imediately search for the word under de cursor in a new tab
+" nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
 
 " Buffer switching
 map <leader>p :bp<CR> " \p previous buffer
