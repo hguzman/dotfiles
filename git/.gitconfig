@@ -3,6 +3,7 @@
   tags = tag -l
   branches = branch -a
   remotes = remote -v
+  upstream = remote add upstream
   # Pretty log output
   hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
 	co = checkout
@@ -39,7 +40,7 @@
   merge = refs/heads/master
 
 [user]
-	name = Henry Guzmán
+	name = Henry Guzmán
 	email = hguzman10@gmail.com
 [filter "lfs"]
 	process = git-lfs filter-process
