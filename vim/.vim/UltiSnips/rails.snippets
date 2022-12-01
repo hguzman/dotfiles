@@ -10,6 +10,14 @@ snippet vpo
 validates :${1:field}, presence: true
 endsnippet
 
+snippet vuo
+validates :${1:field}, uniqueness: true
+endsnippet
+
+snippet bto
+belongs_to :${1:field}
+endsnippet
+
 #  test
 snippet haveone
 it { should have_one(:${1:model}.dependent(:destroy) }

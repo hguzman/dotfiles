@@ -54,6 +54,11 @@ Plugin 'itchyny/lightline.vim'
 " Para el tema de manejar el buffer
 " Plugin 'sjbach/lusty'
 Plugin 'mileszs/ack.vim'
+Plugin 'dart-lang/dart-vim-plugin'
+" Dart support
+" Plug 'dart-lang/dart-vim-plugin'
+" Plug 'natebosch/vim-lsc'
+" Plug 'natebosch/vim-lsc-dart'
 
 call vundle#end() 
 
@@ -61,7 +66,7 @@ set tags=./tags; " Set tags directory
 set autoindent " Auto indention should be on
 
 
-filetype plugin indent on
+" filetype plugin indent on
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Ruby stuff: Thanks Ben :)
@@ -118,6 +123,9 @@ colorscheme molokai
 " Relative number
 set nu rnu
 set ruler
+
+" fold lines
+set foldmethod=manual
 
 " My leader key
 let mapleader=","

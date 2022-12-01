@@ -5,17 +5,18 @@
   remotes = remote -v
   upstream = remote add upstream
   # Pretty log output
+  logs = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all
   hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	last = log -1 HEAD
-	recommit = commit --amend -m
-	commend = commit --amend --no-edit
-	who = blame
-	newbie = checkout --orphan
-	tree = log --graph --oneline --all
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  last = log -1 HEAD
+  recommit = commit --amend -m
+  commend = commit --amend --no-edit
+  who = blame
+  newbie = checkout --orphan
+  tree = log --graph --oneline --all
 
 [color]
   # Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -40,7 +41,7 @@
   merge = refs/heads/master
 
 [user]
-	name = Henry Guzmán
+	name = Ing. Henry Guzmán
 	email = hguzman10@gmail.com
 [filter "lfs"]
 	process = git-lfs filter-process
@@ -56,3 +57,5 @@
 [mergetool "diffmerge"]
 	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
 	trustExitCode = true
+[init]
+	defaultBranch = main
