@@ -43,6 +43,8 @@ Bundle 'tpope/vim-dispatch'
 
 Bundle 'plasticboy/vim-markdown'
 
+Bundle 'christoomey/vim-sort-motion'
+
 Plugin 'mattn/emmet-vim'
 
 Plugin 'thoughtbot/vim-rspec'
@@ -59,6 +61,7 @@ Plugin 'dart-lang/dart-vim-plugin'
 " Plug 'dart-lang/dart-vim-plugin'
 " Plug 'natebosch/vim-lsc'
 " Plug 'natebosch/vim-lsc-dart'
+
 
 call vundle#end() 
 
