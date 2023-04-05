@@ -41,7 +41,7 @@
   merge = refs/heads/master
 
 [user]
-	name = Ing. Henry Guzmán
+	name = Henry Miguel Guzmán Escorcia
 	email = hguzman10@gmail.com
 [filter "lfs"]
 	process = git-lfs filter-process
