@@ -27,6 +27,18 @@ vim.keymap.set('n', '<Leader><CR>', ':nohlsearch<CR>', { noremap = true, silent 
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("c", "jk", "<C-c>", { noremap = true, silent = true })
 
+-- Atajos flutter
+-- vim.api.nvim_set_keymap('n', '<leader>fr', ':FlutterRun<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fd', ':FlutterDevices<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>fq', ':FlutterQuit<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>fs', ':FlutterRun<CR>', { silent = true, desc = 'Flutter Run' })   -- Start (Run)
+vim.keymap.set('n', '<leader>fr', ':FlutterHotReload<CR>', { silent = true, desc = 'Flutter Hot Reload' }) -- Reload
+vim.keymap.set('n', '<leader>fR', ':FlutterHotRestart<CR>', { silent = true, desc = 'Flutter Hot Restart' }) -- Restart
+vim.keymap.set('n', '<leader>fd', ':FlutterDevices<CR>', { silent = true, desc = 'Flutter Devices' }) -- Devices
+vim.keymap.set('n', '<leader>fe', ':FlutterEmulators<CR>', { silent = true, desc = 'Flutter Emulators' }) -- Emulators
+vim.keymap.set('n', '<leader>fq', ':FlutterQuit<CR>', { silent = true, desc = 'Flutter Quit' }) -- Quit
+
+
 -- Renombrar archivo
 vim.keymap.set("n", "<leader>rn", function()
   local new_name = vim.fn.input("Nuevo nombre: ", vim.fn.expand("%"), "file")
