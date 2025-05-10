@@ -1,3 +1,17 @@
+# | Tipo       | Uso                                                      |
+# | ---------- | -------------------------------------------------------- |
+# | `feat`     | Nueva funcionalidad                                      |
+# | `fix`      | Corrección de errores                                    |
+# | `docs`     | Cambios en documentación                                 |
+# | `style`    | Formato, espacios, comas (sin cambiar la lógica)         |
+# | `refactor` | Refactorización sin cambiar comportamiento               |
+# | `test`     | Agregar o cambiar pruebas                                |
+# | `chore`    | Tareas menores: configs, scripts, dependencias, etc.     |
+# | `perf`     | Mejoras de rendimiento                                   |
+# | `ci`       | Cambios en pipelines de integración continua             |
+# | `build`    | Cambios relacionados al build system (npm, Docker, etc.) |
+
+
 <tipo>(<módulo>): <breve descripción>
 
 Descripción detallada del cambio:
