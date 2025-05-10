@@ -24,6 +24,7 @@ return {
 			})
 			-- Configuración para Dart (Flutter)
 			lspconfig.dartls.setup({})
+			lspconfig.pyright.setup({})
 		end,
 	},
 }
