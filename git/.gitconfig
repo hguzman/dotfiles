@@ -61,3 +61,7 @@
 	trustExitCode = true
 [init]
 	defaultBranch = main
+[commit]
+	template = ~/dotfiles/git/gitmessage.txt
+[core]
+	editor = nvim

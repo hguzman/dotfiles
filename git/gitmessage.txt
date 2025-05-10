@@ -1,0 +1,10 @@
+<tipo>(<módulo>): <breve descripción>
+
+Descripción detallada del cambio:
+- Qué se hizo
+- Por qué se hizo
+- Contexto si aplica
+
+Refs: #
+BREAKING CHANGE:
+
