@@ -1,3 +1,7 @@
+[user]
+	name = Henry Guzman
+	email = hguzman@cars-ok.com
+	signingkey = 90746EADFF556410
 [alias]
   # Show verbose output about tags, branches or remotes
   tags = tag -l
@@ -41,9 +45,6 @@
   remote = origin
   merge = refs/heads/master
 
-[user]
-	name = Henry Miguel Guzmán Escorcia
-	email = hguzman10@gmail.com
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
