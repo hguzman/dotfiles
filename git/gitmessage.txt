@@ -1,3 +1,13 @@
+<tipo>(<módulo>): <breve descripción>
+
+Descripción detallada del cambio:
+- Qué se hizo
+- Por qué se hizo
+- Contexto si aplica
+
+Refs: #
+BREAKING CHANGE:
+
 # | Tipo       | Uso                                                      |
 # | ---------- | -------------------------------------------------------- |
 # | `feat`     | Nueva funcionalidad                                      |
@@ -10,15 +20,3 @@
 # | `perf`     | Mejoras de rendimiento                                   |
 # | `ci`       | Cambios en pipelines de integración continua             |
 # | `build`    | Cambios relacionados al build system (npm, Docker, etc.) |
-
-
-<tipo>(<módulo>): <breve descripción>
-
-Descripción detallada del cambio:
-- Qué se hizo
-- Por qué se hizo
-- Contexto si aplica
-
-Refs: #
-BREAKING CHANGE:
-
